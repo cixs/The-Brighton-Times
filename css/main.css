@@ -1,0 +1,447 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  box-shadow: lightgrey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+header,
+nav,
+footer,
+section,
+article,
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ *
+ * Common
+ * 
+ */
+
+.news_more {
+  float: right;
+  font-size: .8em;
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+/*font-family: 'Montserrat', sans-serif;
+
+ font-family: 'Playfair Display SC', serif;
+*/
+
+.header-container {
+  background: linear-gradient(to top, #a80234, #ff0077);
+}
+
+.header {
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+
+.header_inner {
+  width: 100%;
+}
+
+.header_logo {
+  height: 72px;
+  vertical-align: middle;
+  padding: 1em;
+}
+
+.header_title {
+  font-family: 'Cormorant Infant', serif;
+  font-size: 5em;
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  text-shadow: 3px 3px 2px #000000e1;
+}
+
+.hamburger-menu {
+  height: 40px;
+  display: none;
+  float:right;
+  margin-right: 10px;
+}
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.nav_list {
+  width: 100%;
+  padding: 0;
+}
+
+.nav_item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 20px;
+  padding: 16px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px #3a5e6e;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1.5em;
+}
+
+.nav a:hover {
+  color: #fbff00;
+}
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.hero {
+  width: 100%;
+  position: relative;
+  background-image: url("../images/dog.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+.hero article {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ *
+ * Top News
+ *
+ */
+
+.top-news {
+  height: 300px;
+  border-bottom: 1px solid rgb(218, 217, 217);
+  padding: 1em;
+  background-color: rgb(255, 242, 242);
+}
+
+.news_title {
+  font-weight: 300;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  line-height: 24px;
+  font-size: 16px;
+  color: rgb(0, 0, 255);
+}
+
+.top-news_item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+
+.top-news_item:before {
+  content: "» ";
+}
+
+.top-news_item:last-child {
+  border-bottom: none;
+}
+
+.top-news_item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.top-news_item a:hover,
+.top-news_item a:active {
+  text-decoration: underline;
+}
+
+/*
+ *
+ * Sport Scores
+ *
+ */
+
+.scores {
+  min-width: 280px;
+  padding-top: 1em;
+  background-color: #eceff1;
+}
+.scores_title {
+  font-weight: 300;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  line-height: 24px;
+  font-size: 16px;
+  color: rgb(0, 0, 255);
+  padding-left:10px;
+}
+.scores_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.scores_table th,
+.scores_table td {
+  padding: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scores_table th {
+  color: #fff;
+  font-weight: 300;
+  background-color: rgb(204, 205, 206);
+}
+
+.scores_table tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.scores_table tr:nth-child(even) td {
+  background-color: #eceff1;
+}
+
+.scores_table td.winner {
+  font-weight: bold;
+}
+
+.scores_table td:nth-child(3) {
+  text-align: right;
+}
+
+.scores_table td:nth-child(2),
+.scores_table td:nth-child(5) {
+  text-align: center;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.weather {
+  min-width: 280px;
+  padding: 1em;
+  background-color: rgb(220, 241, 255);
+}
+
+.weather_location {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+  color: rgb(0, 0, 255);
+}
+
+.weather_desc {
+  display: block;
+  font-size: 1.2em;
+}
+
+.weather_today {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.weather_today_image {
+  vertical-align: middle
+}
+
+.weather_today_temp {
+  font-size: 3em;
+}
+
+.weather_today_deg {
+  font-size: 2em;
+  display: inline;
+}
+
+.weather_next_item {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+
+.weather_next_item span {
+  display: block;
+}
+
+.weather_next_image {
+  width: 100%;
+}
+
+/*
+ *
+ * Recent News
+ *
+ */
+
+.recent-news {
+  padding: 1em;
+  background-color: rgb(242, 255, 231);
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.snippet {
+  margin: 24px 0;
+}
+
+.snippet_thumbnail {
+  width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+
+.snippet_title {
+  font-weight: 500;
+}
+
+.snippet_title a {
+  text-decoration: none;
+  color: #666;
+}
+
+.snippet_title a:hover,
+.snippet_title a:active {
+  text-decoration: underline;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 280px)and (max-width: 600px) {
+  .hero,.weather,.news,.scores {
+    width: 100%;
+  }
+  .nav, .header_logo, footer{
+    display:none;
+  }
+  .hamburger-menu{
+    display:inline-block;
+  }
+  .header_title{
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+  .hero{
+    width: 100%;
+  }
+  .weather, .scores{
+    width: 50%;
+  }
+  .news{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .hero{
+    width: 100%;
+  }
+  .weather, .scores{
+    width: 33.33%;
+  }
+  .news{
+    width: 66.66%;
+  }
+}
