@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Brighton Times</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Cormorant+Infant" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto|Special+Elite" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/side-menu.css">
 
@@ -15,14 +15,15 @@
 <body>
 
   <div id="mySidenav" class="sidenav">
+    <!--code snippet from https://www.w3schools.com/howto/howto_js_sidenav.asp-->
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="https://www.google.ro/"target="_blank">News</a>
-    <a href="https://eu.udacity.com/"target="_blank">Events</a>
-    <a href="https://developer.mozilla.org/en-US/"target="_blank">Culture</a>
-    <a href="https://www.w3schools.com/default.asp"target="_blank">Blog</a>
-    <a href="https://slack.com/"target="_blank">Contact us</a>
-    <a href="https://github.com/cixs?tab=repositories"target="_blank">Follow us on Twitter</a>
-    <a href="https://en.wikipedia.org/wiki/RSS"target="_blank">RSS</a>
+    <a href="https://www.google.ro/" target="_blank">News</a>
+    <a href="https://eu.udacity.com/" target="_blank">Events</a>
+    <a href="https://developer.mozilla.org/en-US/" target="_blank">Culture</a>
+    <a href="https://www.w3schools.com/default.asp" target="_blank">Blog</a>
+    <a href="https://slack.com/" target="_blank">Contact us</a>
+    <a href="https://github.com/cixs?tab=repositories" target="_blank">Follow us on Twitter</a>
+    <a href="https://en.wikipedia.org/wiki/RSS" target="_blank">RSS</a>
   </div>
 
   <div class="header-container">
@@ -84,6 +85,8 @@
       </section>
 
       <section class="weather">
+        <h2 class="news_title">Weather
+        </h2>
         <span class="weather_location">Brighton, UK</span>
         <span class="weather_desc">Sunny</span>
         <span class="weather_today">
@@ -119,8 +122,11 @@
           </li>
         </ul>
       </section>
+
       <section class="scores">
-          <span class="scores_title">Sport</span>
+        <h2 class="news_title">Scores
+          <a href="#" class="news_more">+ more</a>
+        </h2>
         <table class="scores_table">
           <thead>
             <tr>
@@ -236,16 +242,15 @@
   </main>
 
   <script>
-
-  /* Set the width of the side navigation to 250px */
-  function openNav() {
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  /* Set the width of the side navigation to 0 */
-  function closeNav() {
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-  }
+    }
   </script>
 
 </body>

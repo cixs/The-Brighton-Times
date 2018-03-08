@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   max-width: 1280px;
   width: 100%;
@@ -57,13 +57,20 @@ ul {
  *
  */
 
-/*font-family: 'Montserrat', sans-serif;
+/*
 
- font-family: 'Playfair Display SC', serif;
+    font-family: 'Special Elite', cursive;
+
+    font-family: 'Berkshire Swash', cursive;
+
+    font-family: 'Roboto', sans-serif;
+
+
 */
 
 .header-container {
-  background: linear-gradient(to top, #a80234, #ff0077);
+  background: linear-gradient(to top, #0000ff, #9ebffc);
+  min-width: 320px;
 }
 
 .header {
@@ -82,8 +89,8 @@ ul {
 }
 
 .header_title {
-  font-family: 'Cormorant Infant', serif;
-  font-size: 5em;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 4em;
   display: inline-block;
   color: #ffffff;
   vertical-align: middle;
@@ -93,7 +100,7 @@ ul {
 .hamburger-menu {
   height: 40px;
   display: none;
-  float:right;
+  float: right;
   margin-right: 10px;
 }
 
@@ -197,11 +204,13 @@ main {
 }
 
 .news_title {
-  font-weight: 300;
+  font-family: 'Special Elite', cursive;
+  font-weight: 200;
   border-bottom: 1px solid rgb(212, 212, 212);
   line-height: 24px;
   font-size: 16px;
-  color: rgb(0, 0, 255);
+  background: linear-gradient(to right, #0000ff, #dbe7ff);
+  color: #ffffff;
 }
 
 .top-news_item {
@@ -235,18 +244,11 @@ main {
  */
 
 .scores {
-  min-width: 280px;
-  padding-top: 1em;
   background-color: #eceff1;
+  border-bottom: 1px solid rgb(218, 217, 217);
+  padding: 1em;
 }
-.scores_title {
-  font-weight: 300;
-  border-bottom: 1px solid rgb(212, 212, 212);
-  line-height: 24px;
-  font-size: 16px;
-  color: rgb(0, 0, 255);
-  padding-left:10px;
-}
+
 .scores_table {
   width: 100%;
   table-layout: fixed;
@@ -294,7 +296,7 @@ main {
  */
 
 .weather {
-  min-width: 280px;
+  height: 300px;
   padding: 1em;
   background-color: rgb(220, 241, 255);
 }
@@ -303,7 +305,6 @@ main {
   display: block;
   font-weight: 300;
   font-size: 1.5em;
-  color: rgb(0, 0, 255);
 }
 
 .weather_desc {
@@ -407,41 +408,48 @@ footer a {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 280px)and (max-width: 600px) {
-  .hero,.weather,.news,.scores {
+@media screen and (min-width: 300px)and (max-width: 600px) {
+  .hero,
+  .weather,
+  .news,
+  .scores {
     width: 100%;
   }
-  .nav, .header_logo, footer{
-    display:none;
+  .nav,
+  .header_logo,
+  footer {
+    display: none;
   }
-  .hamburger-menu{
-    display:inline-block;
+  .hamburger-menu {
+    display: inline-block;
   }
-  .header_title{
+  .header_title {
     font-size: 32px;
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1280px) {
-  .hero{
+  .hero {
     width: 100%;
   }
-  .weather, .scores{
+  .weather,
+  .scores {
     width: 50%;
   }
-  .news{
+  .news {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1281px) {
-  .hero{
+  .hero {
     width: 100%;
   }
-  .weather, .scores{
+  .weather,
+  .scores {
     width: 33.33%;
   }
-  .news{
+  .news {
     width: 66.66%;
   }
 }
