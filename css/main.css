@@ -7,20 +7,13 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   max-width: 1280px;
+  min-width: 360px;
   width: 100%;
   margin: auto;
   border-style: solid;
   border-width: 1px;
   border-color: grey;
   box-shadow: lightgrey;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
 }
 
 header,
@@ -44,7 +37,7 @@ ul {
  * 
  */
 
-.news_more {
+.news-more {
   float: right;
   font-size: .8em;
   color: #333;
@@ -69,39 +62,50 @@ ul {
 */
 
 .header-container {
-  background: linear-gradient(to top, #0000ff, #9ebffc);
   min-width: 320px;
 }
 
 .header {
   min-height: 56px;
   transition: min-height 0.3s;
+  background: linear-gradient(to top, #cccccc, #ffffff);
 }
 
-.header_inner {
+.header-inner {
   width: 100%;
+  background-image: url("../images/old-paper.jpg");
+  display:inline-block;
 }
 
-.header_logo {
+.header-logo {
   height: 72px;
   vertical-align: middle;
-  padding: 1em;
+  margin: 1em;
+  padding-bottom:0;
 }
 
-.header_title {
-  font-family: 'Berkshire Swash', cursive;
+.header-title {
+  font-family: 'Special Elite', cursive;
+  font-weight: 100;
   font-size: 4em;
   display: inline-block;
-  color: #ffffff;
-  vertical-align: middle;
-  text-shadow: 3px 3px 2px #000000e1;
+  color: #000;
+  text-shadow: 3px 3px 2px #888888;
+  vertical-align: bottom;
+  margin: 0;
+}
+.header-title:after { 
+  content: "";
 }
 
 .hamburger-menu {
-  height: 40px;
+  height: 33px;
   display: none;
   float: right;
-  margin-right: 10px;
+  margin: 0;
+  padding: 0;
+  font-size:30px;
+  cursor:pointer;
 }
 
 /*
@@ -111,18 +115,21 @@ ul {
  */
 
 .nav {
+  font-family: 'Special Elite', cursive;
+  font-weight: 200;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
+  background-color: rgb(144, 144, 144);
 }
 
-.nav_list {
+.nav-list {
   width: 100%;
   padding: 0;
 }
 
-.nav_item {
+.nav-item {
   box-sizing: border-box;
   display: inline-block;
   width: 24%;
@@ -130,7 +137,6 @@ ul {
   line-height: 20px;
   padding: 16px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 3px #3a5e6e;
 }
 
 .nav a {
@@ -140,7 +146,7 @@ ul {
 }
 
 .nav a:hover {
-  color: #fbff00;
+  color: #000000;
 }
 
 /*
@@ -181,8 +187,12 @@ main {
   bottom: 0;
   height: 30%;
   width: 100%;
-  color: #fff;
+  color: #00ffea93;
   padding: 1em;
+}
+
+.hero article:hover {
+  color: #00ffea;
 }
 
 .description {
@@ -200,40 +210,39 @@ main {
   height: 300px;
   border-bottom: 1px solid rgb(218, 217, 217);
   padding: 1em;
-  background-color: rgb(255, 242, 242);
 }
 
-.news_title {
+.news-title {
   font-family: 'Special Elite', cursive;
   font-weight: 200;
   border-bottom: 1px solid rgb(212, 212, 212);
   line-height: 24px;
   font-size: 16px;
-  background: linear-gradient(to right, #0000ff, #dbe7ff);
+  background: linear-gradient(to right, #0000ff, #fafafa);
   color: #ffffff;
 }
 
-.top-news_item {
-  border-bottom: 1px solid #E0E0E0;
+.top-news-item {
+  border-bottom: 1px solid #00f;
   padding: 1em 0;
   line-height: 19.2px;
 }
 
-.top-news_item:before {
+.top-news-item:before {
   content: "» ";
 }
 
-.top-news_item:last-child {
+.top-news-item:last-child {
   border-bottom: none;
 }
 
-.top-news_item a {
+.top-news-item a {
   text-decoration: none;
   color: #666;
 }
 
-.top-news_item a:hover,
-.top-news_item a:active {
+.top-news-item a:hover,
+.top-news-item a:active {
   text-decoration: underline;
 }
 
@@ -249,43 +258,43 @@ main {
   padding: 1em;
 }
 
-.scores_table {
+.scores-table {
   width: 100%;
   table-layout: fixed;
 }
 
-.scores_table th,
-.scores_table td {
+.scores-table th,
+.scores-table td {
   padding: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.scores_table th {
+.scores-table th {
   color: #fff;
   font-weight: 300;
   background-color: rgb(204, 205, 206);
 }
 
-.scores_table tr:nth-child(odd) td {
+.scores-table tr:nth-child(odd) td {
   background-color: #fff;
 }
 
-.scores_table tr:nth-child(even) td {
+.scores-table tr:nth-child(even) td {
   background-color: #eceff1;
 }
 
-.scores_table td.winner {
+.scores-table td.winner {
   font-weight: bold;
 }
 
-.scores_table td:nth-child(3) {
+.scores-table td:nth-child(3) {
   text-align: right;
 }
 
-.scores_table td:nth-child(2),
-.scores_table td:nth-child(5) {
+.scores-table td:nth-child(2),
+.scores-table td:nth-child(5) {
   text-align: center;
 }
 
@@ -299,48 +308,49 @@ main {
   height: 300px;
   padding: 1em;
   background-color: rgb(220, 241, 255);
+  border-bottom: 1px solid rgb(218, 217, 217);
 }
 
-.weather_location {
+.weather-location {
   display: block;
   font-weight: 300;
   font-size: 1.5em;
 }
 
-.weather_desc {
+.weather-desc {
   display: block;
   font-size: 1.2em;
 }
 
-.weather_today {
+.weather-today {
   width: 60%;
   vertical-align: middle;
 }
 
-.weather_today_image {
+.weather-today-image {
   vertical-align: middle
 }
 
-.weather_today_temp {
+.weather-today-temp {
   font-size: 3em;
 }
 
-.weather_today_deg {
+.weather-today-deg {
   font-size: 2em;
   display: inline;
 }
 
-.weather_next_item {
+.weather-next-item {
   display: inline-block;
   width: 19%;
   text-align: center;
 }
 
-.weather_next_item span {
+.weather-next-item span {
   display: block;
 }
 
-.weather_next_image {
+.weather-next-image {
   width: 100%;
 }
 
@@ -352,31 +362,31 @@ main {
 
 .recent-news {
   padding: 1em;
-  background-color: rgb(242, 255, 231);
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid rgb(218, 217, 217);
 }
 
 .snippet {
   margin: 24px 0;
+  border-bottom: 1px solid #00f;
 }
 
-.snippet_thumbnail {
+.snippet-thumbnail {
   width: 100px;
   float: left;
   margin-right: 1em;
 }
 
-.snippet_title {
+.snippet-title {
   font-weight: 500;
 }
 
-.snippet_title a {
+.snippet-title a {
   text-decoration: none;
-  color: #666;
+  color: rgb(255, 0, 0);
 }
 
-.snippet_title a:hover,
-.snippet_title a:active {
+.snippet-title a:hover,
+.snippet-title a:active {
   text-decoration: underline;
 }
 
@@ -416,15 +426,18 @@ footer a {
     width: 100%;
   }
   .nav,
-  .header_logo,
+  .header-logo,
   footer {
     display: none;
   }
   .hamburger-menu {
     display: inline-block;
   }
-  .header_title {
+  .header-title {
     font-size: 32px;
+    position:relative;
+   top:10px;
+   left:10px;
   }
 }
 

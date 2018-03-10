@@ -14,7 +14,7 @@
     top: 0;
     /* Stay at the top */
     left: 0;
-    background-color: #111;
+    background-color: rgb(95, 95, 95);
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -22,6 +22,9 @@
     /* Place content 60px from the top */
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
+    font-family: 'Special Elite', cursive;
+    font-weight: 100;
+    font-size:16px;
 }
 
 /* The navigation menu links */
@@ -30,9 +33,9 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 /* When you mouse over the navigation links, change their color */
